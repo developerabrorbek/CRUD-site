@@ -4,7 +4,7 @@ import "./index.scss";
 function Header(props) {
 
   function toRegister(){
-    window.location.href = "../../pages/Register/register.html"
+    window.location.href = "./src/pages/Register/register.html"
   }
 
 
