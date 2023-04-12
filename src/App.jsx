@@ -1,6 +1,7 @@
 import React from "react";
 import Aside from "./components/Aside";
 import Header from "./components/Header";
+import Home from "./components/Home";
 
 function App(props) {
   return (
@@ -14,6 +15,11 @@ function App(props) {
               <Header />
             </div>
           </header>
+          <div className="hero">
+            <div className="container">
+              <Home/>
+            </div>
+          </div>
         </main>
     </div>
   );

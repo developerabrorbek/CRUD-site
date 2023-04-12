@@ -1,12 +1,10 @@
 import React from "react";
 import "./index.scss";
-import lastImage from "../../assets/icons/last-icon.svg";
-import bellImage from "../../assets/icons/bell-icon.svg";
 
 function Header(props) {
   return (
     <div className="header__inner">
-      <div className="header-last">
+      <a href="#" className="header-last">
         <svg
           width="18"
           height="18"
@@ -31,7 +29,7 @@ function Header(props) {
             </clipPath>
           </defs>
         </svg>
-      </div>
+      </a>
       <div className="header-extra">
         <form>
           <input
