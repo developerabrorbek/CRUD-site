@@ -92,7 +92,18 @@
   &-logout {
     text-decoration: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 23px;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover{
+      background: #feaf00;
+        cursor: pointer;
+    }
 
     &__text {
       font-style: normal;

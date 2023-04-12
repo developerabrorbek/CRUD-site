@@ -2,15 +2,9 @@ import React from "react";
 import "./index.scss";
 
 function Header(props) {
-
-  function toRegister(){
-    window.location.href = "./src/pages/Register/register.html"
-  }
-
-
   return (
     <div className="header__inner">
-      <a href="#" className="header-last" onClick={toRegister}>
+      <div href="#"className="header-last">
         <svg
           width="18"
           height="18"
@@ -35,7 +29,7 @@ function Header(props) {
             </clipPath>
           </defs>
         </svg>
-      </a>
+      </div>
       <div className="header-extra">
         <form>
           <input

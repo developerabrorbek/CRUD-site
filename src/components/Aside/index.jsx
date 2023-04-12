@@ -27,6 +27,10 @@ function Aside(props) {
     "Settings",
   ];
 
+  function toRegister(){
+    window.location.href = "./src/pages/Register/register.html"
+  }
+
   return (
     <>
       <div className="aside-title">
@@ -48,7 +52,7 @@ function Aside(props) {
         })}
       </ul>
 
-      <a href="#" className="aside-logout">
+      <a href="#" className="aside-logout" onClick={toRegister}>
         <p className="aside-logout__text">Logout</p>
         <img src={logoutIcon} alt="logout icon"/>
       </a>
