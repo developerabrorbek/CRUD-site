@@ -28,7 +28,7 @@ function Aside(props) {
   ];
 
   function toRegister(){
-    window.location.href = "./src/pages/Register/register.html"
+    window.location.href = "./src/pages/Register/"
   }
 
   return (
