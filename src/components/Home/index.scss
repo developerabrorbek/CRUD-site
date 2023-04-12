@@ -6,6 +6,8 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     list-style-type: none;
+
+    
   }
 
   &-card {
@@ -15,6 +17,10 @@
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
+
+    &:nth-child(2), &:nth-child(3){
+      background: #FEFBEC;
+    }
 
     &:hover{
         background: linear-gradient(110.42deg, #FEAF00 18.27%, #F8D442 91.84%);

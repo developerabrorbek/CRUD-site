@@ -70,6 +70,10 @@
     padding-left: 40px;
     transition: all 0.3s ease;
 
+    .active-page{
+      background: #feaf00;
+    }
+
     &:hover{
         background: #feaf00;
         cursor: pointer;
