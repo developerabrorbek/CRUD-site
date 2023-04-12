@@ -2,9 +2,15 @@ import React from "react";
 import "./index.scss";
 
 function Header(props) {
+
+  function toRegister(){
+    window.location.href = "../../pages/Register/register.html"
+  }
+
+
   return (
     <div className="header__inner">
-      <a href="#" className="header-last">
+      <a href="#" className="header-last" onClick={toRegister}>
         <svg
           width="18"
           height="18"
