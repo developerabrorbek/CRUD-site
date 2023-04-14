@@ -1,10 +1,10 @@
 .students {
-  margin-top: 0;
   background-color: #e5e5e541;
 
-  &__inner {
-    background-color: #e5e5e541;
+  &__inner{
+    height: calc(100vh + 100px);
   }
+
   &-info {
     display: flex;
     justify-content: space-between;
@@ -12,6 +12,7 @@
     border: none;
     border-bottom: 1px solid #e5e5e5;
     padding: 12px 0;
+    
 
     &__title {
       font-style: normal;
@@ -22,6 +23,10 @@
       margin: 0;
       padding: 0;
     }
+  }
+
+  tr{
+    border-radius: 12px;
   }
 
   &-extra {

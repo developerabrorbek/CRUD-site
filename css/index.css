@@ -1,6 +1,9 @@
 .payment {
-  background: #E5E5E5;
+  background: rgba(229, 229, 229, 0.2470588235);
 }
 .payment__inner {
   padding: 20px 0;
+}
+.payment__inner__inner {
+  height: calc(100vh + 100px);
 }/*# sourceMappingURL=index.css.map */

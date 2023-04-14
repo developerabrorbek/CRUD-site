@@ -3,7 +3,9 @@ import "./index.scss";
 
 function Header(props) {
   return (
-    <div className="header__inner">
+    <header className="header">
+      <div className="container">
+      <div className="header__inner">
       <div href="#"className="header-last">
         <svg
           width="18"
@@ -66,6 +68,8 @@ function Header(props) {
         </div>
       </div>
     </div>
+      </div>
+    </header>
   );
 }
 

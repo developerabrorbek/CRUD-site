@@ -8,7 +8,9 @@ import "./index.scss";
 function Students(props) {
   return (
     <>
-      <div className="students__inner">
+      <div className="students">
+        <div className="container">
+        <div className="students__inner">
         <div className="students-info">
           <h2 className="students-info__title">Students List</h2>
           <div className="students-extra">
@@ -26,6 +28,8 @@ function Students(props) {
               <th>Phone</th>
               <th>Enroll Number</th>
               <th>Date of admission</th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -53,6 +57,8 @@ function Students(props) {
             </tr>
           </tbody>
         </table>
+      </div>
+        </div>
       </div>
     </>
   );

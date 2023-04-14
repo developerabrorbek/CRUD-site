@@ -10,25 +10,15 @@ import {Route, Routes } from "react-router-dom";
 function App(props) {
   return (
       <div className="wrapper">
-        <aside className="aside">
           <Aside />
-        </aside>
         <main className="main">
-          <header className="header">
-            <div className="container">
               <Header />
-            </div>
-          </header>
-          <div className="hero">
-            <div className="container">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/students" element={<Students />} />
                 <Route path="/payment" element={<Payment />} />
                 <Route path="*" element={<Error />} />
               </Routes>
-            </div>
-          </div>
         </main>
       </div>
   );

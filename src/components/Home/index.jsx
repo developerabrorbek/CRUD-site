@@ -7,6 +7,8 @@ import HeroImage4 from "../../assets/icons/user-image.svg";
 
 function Home(props) {
   return (
+   <div className="hero">
+    <div className="container">
     <div className="hero__inner">
       <ul className="hero-cards">
         <li className="hero-card">
@@ -55,6 +57,8 @@ function Home(props) {
         </li>
       </ul>
     </div>
+    </div>
+   </div>
   );
 }
 

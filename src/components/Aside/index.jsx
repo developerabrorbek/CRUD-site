@@ -42,6 +42,7 @@ function Aside(props) {
 
   return (
     <>
+      <div className="aside">
       <div className="aside-title">
         <h1 className="aside-title__text">CRUD OPERATIONS</h1>
       </div>
@@ -67,6 +68,7 @@ function Aside(props) {
         <p className="aside-logout__text">Logout</p>
         <img src={logoutIcon} alt="logout icon" />
       </a>
+      </div>
     </>
   );
 }

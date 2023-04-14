@@ -1,7 +1,10 @@
 .payment{
-    background: #E5E5E5;
+    background: #e5e5e53f;
 
     &__inner{
         padding: 20px 0;
+        &__inner{
+            height: calc(100vh + 100px);
+          }
     }
 }
