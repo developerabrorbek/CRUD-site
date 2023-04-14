@@ -1,0 +1,40 @@
+.students {
+  margin-top: 0;
+  background-color: #e5e5e541;
+
+  &__inner {
+    background-color: #e5e5e541;
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 12px 0;
+
+    &__title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &-extra {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  .table-image {
+    background: #c4c4c4;
+    border-radius: 8px;
+    width: 65px;
+    height: 55px;
+    overflow: hidden;
+  }
+}
