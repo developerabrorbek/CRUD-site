@@ -8,12 +8,12 @@ function Register(props) {
     function toMain(e){
         e.preventDefault();
 
-        if(email == ""){
+        if(email == "" || password == ""){
+          toast.error("Please fill both email and password fields😔😔😔");
+        }else if(email == ""){
           toast.warning("Please fill email field");
         }else if(password == ""){
           toast.warning("Please fill password field");
-        }else if(email == "" || password == ""){
-          toast.error("Please fill both email and password fields😔😔😔");
         }else{
           toast.success("Successfully signed✔✔✔")
           window.location.href = "../../../index.html";
@@ -36,7 +36,7 @@ function Register(props) {
                 </p>
                 <label className="register-form__label">
                     <p className="register-form__label-text">Email</p>
-                    <input type="text" onChange={(e)=> setEmail(e.target.value)} placeholder="Enter your email" className="register-form__label-input" />
+                    <input type="email" onChange={(e)=> setEmail(e.target.value)} placeholder="Enter your email" className="register-form__label-input" />
                 </label>
 
                 <label className="register-form__label">
