@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../src/components/Students/index.scss"],"names":[],"mappings":"AAAA,UACE,aACA,+CAEA,iBACE,+CAEF,eACE,aACA,8BACA,mBACA,YACA,gCACA,eAEA,sBACE,kBACA,gBACA,eACA,iBACA,WACA,SACA,UAIJ,gBACE,aACA,mBACA,gBAGF,uBACE,mBACA,kBACA,WACA,YACA","file":"index.min.css"}
+{"version":3,"sourceRoot":"","sources":["../src/components/Payment/index.scss"],"names":[],"mappings":"AAAA,SACI,mBAEA,gBACI","file":"index.min.css"}

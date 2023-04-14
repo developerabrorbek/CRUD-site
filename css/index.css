@@ -1,36 +1,6 @@
-.students {
-  margin-top: 0;
-  background-color: rgba(229, 229, 229, 0.2549019608);
+.payment {
+  background: #E5E5E5;
 }
-.students__inner {
-  background-color: rgba(229, 229, 229, 0.2549019608);
-}
-.students-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: none;
-  border-bottom: 1px solid #e5e5e5;
-  padding: 12px 0;
-}
-.students-info__title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 27px;
-  color: #000000;
-  margin: 0;
-  padding: 0;
-}
-.students-extra {
-  display: flex;
-  align-items: center;
-  column-gap: 30px;
-}
-.students .table-image {
-  background: #c4c4c4;
-  border-radius: 8px;
-  width: 65px;
-  height: 55px;
-  overflow: hidden;
+.payment__inner {
+  padding: 20px 0;
 }/*# sourceMappingURL=index.css.map */
