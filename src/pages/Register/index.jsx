@@ -8,7 +8,7 @@ function Register(props) {
     function toMain(e){
         e.preventDefault();
 
-        if(email == "" || password == ""){
+        if(email == "" && password == ""){
           toast.error("Please fill both email and password fields😔😔😔");
         }else if(email == ""){
           toast.warning("Please fill email field");
@@ -16,7 +16,7 @@ function Register(props) {
           toast.warning("Please fill password field");
         }else{
           toast.success("Successfully signed✔✔✔")
-          window.location.href = "../../../index.html";
+          window.location.href = "../../../";
         }
     }
 
