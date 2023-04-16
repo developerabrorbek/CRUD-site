@@ -6,8 +6,9 @@ import "./index.scss";
 
 function Payment(props) {
 
-  const { mode } = useContext(context);
+  const { mode, language, LANG } = useContext(context);
   const theme = mode ? false : true;
+  const lang = LANG[language];
 
   return (
     <>
@@ -16,7 +17,7 @@ function Payment(props) {
           <div className="payment__inner">
             <div className="students__inner">
               <div className="students-info">
-                <h2 className={"students-info__title "  + (theme ? '' : 'text-white')}>Payment Details</h2>
+                <h2 className={"students-info__title "  + (theme ? '' : 'text-white')}>{lang.paymentPage['title']}</h2>
                 <div className="students-extra">
                   <img src={icon} alt="image" />
                 </div>
@@ -25,12 +26,12 @@ function Payment(props) {
               <table className={"table  "  + (theme ? '' : 'text-white')}>
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Payment Schedule</th>
-                    <th>Bill Number</th>
-                    <th>Amount Paid</th>
-                    <th>Balance amount</th>
-                    <th>Date </th>
+                    <th>{lang.paymentPage['name']}</th>
+                    <th>{lang.paymentPage['schedule']}</th>
+                    <th>{lang.paymentPage['bill']}</th>
+                    <th>{lang.paymentPage['amountPaid']}</th>
+                    <th>{lang.paymentPage['balanceAmount']}</th>
+                    <th>{lang.paymentPage['date']}</th>
                     <th></th>
                   </tr>
                 </thead>

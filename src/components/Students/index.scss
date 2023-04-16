@@ -1,6 +1,6 @@
 .students {
   background-color: #e5e5e541;
-  height: 90.1%;
+  height: calc(100% - 88px);
 
   &__inner{
     height: calc(100vh + 100px);

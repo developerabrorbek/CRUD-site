@@ -4,12 +4,14 @@ import { context } from "../context";
 import "./index.scss";
 
 function Header({ setMode, setLanguage }) {
-  const { mode } = useContext(context);
+  const { mode, LANG, language } = useContext(context);
 
   const theme = mode ? false : true;
 
+  const lang = LANG[language];
+
   return (
-    <header className={`header ` + (theme ? "bg-white" : "bg-[#0B2447]")}>
+    <header className={"header " + (theme ? "bg-white" : "bg-[#0B2447]")}>
       <div className="container">
         <div className="header__inner">
           <div href="#" className="header-last">
@@ -42,17 +44,17 @@ function Header({ setMode, setLanguage }) {
             <div className="header-changes flex gap-3">
               <div
                 className={
-                  "mode-image cursor-pointer text-[#FFEB3B] " +
+                  "mode-image cursor-pointer  " +
                   (theme ? "text-[#FFEB3B]" : "text-[#19376D]")
                 }
                 title="Light mode"
                 onClick={(e) => {
-                  if(mode){
-                    setMode(false)
-                    localStorage.setItem('theme', false)
-                  }else{
-                  setMode(true);
-                  localStorage.setItem('theme', true)
+                  if (mode) {
+                    setMode(false);
+                    localStorage.setItem("theme", false);
+                  } else {
+                    setMode(true);
+                    localStorage.setItem("theme", true);
                   }
                 }}
               >
@@ -79,10 +81,13 @@ function Header({ setMode, setLanguage }) {
                   "p-2 border rounded-xl border-gray-500  outline-gray-800 cursor-pointer " +
                   (theme ? "bg-white" : "bg-[#19376D] text-gray-300")
                 }
-                onChange={(e)=> {setLanguage(e.target.value); localStorage.setItem('language', e.target.value)}}
+                onChange={(e) => {
+                  setLanguage(e.target.value);
+                  localStorage.setItem("language", e.target.value);
+                }}
               >
                 <option value="0" disabled hidden selected>
-                  Select language
+                {lang.header.select}
                 </option>
                 <option value="1">Uzb</option>
                 <option value="2">Eng</option>
@@ -91,7 +96,7 @@ function Header({ setMode, setLanguage }) {
             <form>
               <input
                 type="text"
-                placeholder="Search"
+                placeholder={lang.header.search}
                 className={
                   "header-extra__search " +
                   (theme

@@ -7,8 +7,10 @@ import HeroImage3 from "../../assets/dollar-image.png";
 
 function Home(props) {
 
-  const { mode } = useContext(context);
+  const { mode,LANG, language } = useContext(context);
   const theme = mode ? false : true;
+
+  const lang = LANG[language];
 
   return (
    <div className={"hero " + (theme ? '' : 'bg-[#19376d]')}>
@@ -18,7 +20,7 @@ function Home(props) {
         <li className="hero-card">
           <div className="hero-card__body">
             <img src={HeroImage1} alt="card image" />
-            <h4 className="hero-card__body-title">Students</h4>
+            <h4 className="hero-card__body-title">{lang.homePage.students}</h4>
           </div>
           <span className="hero-card__number">243</span>
         </li>
@@ -26,7 +28,7 @@ function Home(props) {
         <li className="hero-card">
           <div className="hero-card__body">
             <img src={HeroImage2} alt="card image" />
-            <h4 className="hero-card__body-title">Course</h4>
+            <h4 className="hero-card__body-title">{lang.homePage.course}</h4>
           </div>
           <span className="hero-card__number">13</span>
         </li>
@@ -34,7 +36,7 @@ function Home(props) {
         <li className="hero-card">
           <div className="hero-card__body">
             <img src={HeroImage3} alt="card image" />
-            <h4 className="hero-card__body-title">Payments</h4>
+            <h4 className="hero-card__body-title">{lang.homePage.payments}</h4>
           </div>
           <span className="hero-card__number">INR 556,000</span>
         </li>
@@ -55,7 +57,7 @@ function Home(props) {
                 />
               </svg>
             </div>
-            <h4 className="hero-card__body-title">Users</h4>
+            <h4 className="hero-card__body-title">{lang.homePage.users}</h4>
           </div>
           <span className="hero-card__number">3</span>
         </li>

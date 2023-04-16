@@ -7,8 +7,11 @@ import deleteIcon from "../../assets/icons/delete-icon.svg";
 import "./index.scss";
 
 function Students(props) {
-  const { mode } = useContext(context);
+  const { mode, LANG, language } = useContext(context);
   const theme = mode ? false : true;
+
+  const lang = LANG[language];
+  console.log(lang);
 
   return (
     <>
@@ -16,10 +19,10 @@ function Students(props) {
         <div className="container">
         <div className="students__inner">
         <div className="students-info">
-          <h2 className={"students-info__title "  + (theme ? '' : 'text-white')}>Students List</h2>
+          <h2 className={"students-info__title "  + (theme ? '' : 'text-white')}>{lang.studentsPage['title']}</h2>
           <div className="students-extra">
             <img src={image1} alt="image" />
-            <button className="btn btn-warning">ADD NEW STUDENT</button>
+            <button className="btn btn-warning">{lang.studentsPage['button']}</button>
           </div>
         </div>
 
@@ -27,11 +30,11 @@ function Students(props) {
           <thead>
             <tr>
               <th></th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Enroll Number</th>
-              <th>Date of admission</th>
+              <th>{lang.studentsPage['name']}</th>
+              <th>{lang.studentsPage['email']}</th>
+              <th>{lang.studentsPage['phone']}</th>
+              <th>{lang.studentsPage['enrollNumber']}</th>
+              <th>{lang.studentsPage['dateOfAdmission']}</th>
               <th></th>
               <th></th>
             </tr>

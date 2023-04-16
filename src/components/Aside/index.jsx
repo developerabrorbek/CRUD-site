@@ -52,7 +52,7 @@ function Aside(props) {
     <>
       <div className={"aside " + (theme ? '' : ' bg-[#576CBC]')}>
       <div className="aside-title">
-        <h1 className="aside-title__text">CRUD OPERATIONS</h1>
+        <h1 className="aside-title__text">{lang.title}</h1>
       </div>
       <div className="aside-admin">
         <img src={userImage} alt="user-image" className="aside-admin__image" />
