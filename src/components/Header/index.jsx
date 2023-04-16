@@ -81,7 +81,7 @@ function Header({ setMode, setLanguage }) {
                 }
                 onChange={(e)=> {setLanguage(e.target.value); localStorage.setItem('language', e.target.value)}}
               >
-                <option value="0" default selected>
+                <option value="0" disabled hidden selected>
                   Select language
                 </option>
                 <option value="1">Uzb</option>
