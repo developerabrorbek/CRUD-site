@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { BrowserRouter } from "react-router-dom";
 import { context } from "./components/context";
+import LANG from "./components/language/language.jsx";
 import Aside from "./components/Aside";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -11,11 +12,11 @@ import {Route, Routes } from "react-router-dom";
 
 function App(props) {
 
-  const [language, setLanguage] = useState('uzb');
+  const [language, setLanguage] = useState(localStorage.getItem("language") || '2');
   const [mode, setMode] = useState(localStorage.getItem('theme') || true);
 
   return (
-    <context.Provider value={{language, mode}}>
+    <context.Provider value={{language, mode, LANG}}>
     <BrowserRouter>
       <div className="wrapper">
           <Aside />

@@ -79,6 +79,7 @@ function Header({ setMode, setLanguage }) {
                   "p-2 border rounded-xl border-gray-500  outline-gray-800 cursor-pointer " +
                   (theme ? "bg-white" : "bg-[#19376D] text-gray-300")
                 }
+                onChange={(e)=> {setLanguage(e.target.value); localStorage.setItem('language', e.target.value)}}
               >
                 <option value="0" default selected>
                   Select language

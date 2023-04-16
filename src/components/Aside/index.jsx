@@ -13,8 +13,11 @@ import logoutIcon from "../../assets/icons/logout-icon.svg";
 
 function Aside(props) {
 
-  const { mode } = useContext(context);
+  const { mode, LANG, language } = useContext(context);
   const theme = mode ? false : true;
+
+  const lang = LANG[language];
+  
 
   const asideIcons = [
     homeIcon,
@@ -25,12 +28,12 @@ function Aside(props) {
     settingsIcon,
   ];
   const asideTexts = [
-    "Home",
-    "Course",
-    "Students",
-    "Payment",
-    "Report",
-    "Settings",
+    lang['home'],
+    lang['course'],
+    lang['students'],
+    lang['payment'],
+    lang['report'],
+    lang['settings'],
   ];
   const asidePaths = [
     "/",
@@ -70,7 +73,7 @@ function Aside(props) {
       </ul>
 
       <a className="aside-logout" onClick={toRegister}>
-        <p className="aside-logout__text">Logout</p>
+        <p className="aside-logout__text">{lang["logout"]}</p>
         <img src={logoutIcon} alt="logout icon" />
       </a>
       </div>
