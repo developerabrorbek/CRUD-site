@@ -1,23 +1,28 @@
-import React from "react";
+import React,{useContext} from "react";
+import {context} from "../context"
 import icon from "../../assets/icons/sort-icon.svg";
 import icon2 from "../../assets/icons/eye-icon.svg";
 import "./index.scss";
 
 function Payment(props) {
+
+  const { mode } = useContext(context);
+  const theme = mode ? false : true;
+
   return (
     <>
-      <div className="payment">
+      <div className={"payment " + (theme ? '' : 'bg-[#19376D]')}>
         <div className="container">
           <div className="payment__inner">
             <div className="students__inner">
               <div className="students-info">
-                <h2 className="students-info__title">Payment Details</h2>
+                <h2 className={"students-info__title "  + (theme ? '' : 'text-white')}>Payment Details</h2>
                 <div className="students-extra">
                   <img src={icon} alt="image" />
                 </div>
               </div>
 
-              <table className="table table-hover table-striped">
+              <table className={"table  "  + (theme ? '' : 'text-white')}>
                 <thead>
                   <tr>
                     <th>Name</th>

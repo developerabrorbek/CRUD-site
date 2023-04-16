@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useContext} from "react";
+import { context } from "../context";
 import image1 from "../../assets/icons/sort-icon.svg";
 import image2 from "../../assets/aside-image.png";
 import editIcon from "../../assets/icons/edit-icon.svg";
@@ -6,20 +7,23 @@ import deleteIcon from "../../assets/icons/delete-icon.svg";
 import "./index.scss";
 
 function Students(props) {
+  const { mode } = useContext(context);
+  const theme = mode ? false : true;
+
   return (
     <>
-      <div className="students">
+      <div className={"students " + (theme ? '' : 'bg-[#19376d]')}>
         <div className="container">
         <div className="students__inner">
         <div className="students-info">
-          <h2 className="students-info__title">Students List</h2>
+          <h2 className={"students-info__title "  + (theme ? '' : 'text-white')}>Students List</h2>
           <div className="students-extra">
             <img src={image1} alt="image" />
             <button className="btn btn-warning">ADD NEW STUDENT</button>
           </div>
         </div>
 
-        <table className="table table-hover">
+        <table className={"table "  + (theme ? '' : 'text-white')}>
           <thead>
             <tr>
               <th></th>
@@ -33,7 +37,7 @@ function Students(props) {
             </tr>
           </thead>
           <tbody>
-            <tr className="text-center vertical-align-center bg-white" scope="row">
+            <tr className={"text-center vertical-align-center " + (theme ? '' : 'text-white hover:text-gray-200')} scope="row">
               <td>
                 <img
                   src={image2}

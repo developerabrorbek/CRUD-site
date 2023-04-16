@@ -1,5 +1,6 @@
 .students {
   background-color: #e5e5e541;
+  height: 90.1%;
 
   &__inner{
     height: calc(100vh + 100px);
@@ -27,6 +28,10 @@
 
   tr{
     border-radius: 12px;
+  }
+
+  td, th{
+    color: inherit;
   }
 
   &-extra {

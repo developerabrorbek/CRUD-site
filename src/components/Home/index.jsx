@@ -1,13 +1,17 @@
-import React from "react";
+import React,{useContext} from "react";
+import {context} from "../context"
 import "./index.scss";
 import HeroImage1 from "../../assets/graduation-image.png";
 import HeroImage2 from "../../assets/bookmark-image.png";
 import HeroImage3 from "../../assets/dollar-image.png";
-import HeroImage4 from "../../assets/icons/user-image.svg";
 
 function Home(props) {
+
+  const { mode } = useContext(context);
+  const theme = mode ? false : true;
+
   return (
-   <div className="hero">
+   <div className={"hero " + (theme ? '' : 'bg-[#19376d]')}>
     <div className="container">
     <div className="hero__inner">
       <ul className="hero-cards">

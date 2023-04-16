@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useContext} from "react";
 import { NavLink } from "react-router-dom";
+import { context } from "../context";
 import "./index.scss";
 import userImage from "../../assets/aside-image.png";
 import homeIcon from "../../assets/icons/home-icon.svg";
@@ -11,6 +12,10 @@ import settingsIcon from "../../assets/icons/settings-icon.svg";
 import logoutIcon from "../../assets/icons/logout-icon.svg";
 
 function Aside(props) {
+
+  const { mode } = useContext(context);
+  const theme = mode ? false : true;
+
   const asideIcons = [
     homeIcon,
     courseIcon,
@@ -42,7 +47,7 @@ function Aside(props) {
 
   return (
     <>
-      <div className="aside">
+      <div className={"aside " + (theme ? '' : ' bg-[#576CBC]')}>
       <div className="aside-title">
         <h1 className="aside-title__text">CRUD OPERATIONS</h1>
       </div>

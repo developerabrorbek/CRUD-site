@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
+import { BrowserRouter } from "react-router-dom";
+import { context } from "./components/context";
 import Aside from "./components/Aside";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -8,11 +10,17 @@ import Error from "./components/Error";
 import {Route, Routes } from "react-router-dom";
 
 function App(props) {
+
+  const [language, setLanguage] = useState('uzb');
+  const [mode, setMode] = useState(localStorage.getItem('theme') || true);
+
   return (
+    <context.Provider value={{language, mode}}>
+    <BrowserRouter>
       <div className="wrapper">
           <Aside />
         <main className="main">
-              <Header />
+              <Header setLanguage={setLanguage} setMode={setMode}/>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/students" element={<Students />} />
@@ -21,6 +29,8 @@ function App(props) {
               </Routes>
         </main>
       </div>
+      </BrowserRouter>
+    </context.Provider>
   );
 }
 
