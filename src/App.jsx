@@ -13,7 +13,7 @@ import {Route, Routes } from "react-router-dom";
 function App(props) {
 
   const [language, setLanguage] = useState(localStorage.getItem("language") || '2');
-  const [mode, setMode] = useState(localStorage.getItem('theme') || true);
+  const [mode, setMode] = useState(localStorage.getItem('theme') || false);
 
   return (
     <context.Provider value={{language, mode, LANG}}>
